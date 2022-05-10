@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+
+  <!--Bootstrap CDN-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!--JQuery and Popper.js-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <!--Viewport Detection-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Manifest-->
+  <link rel="manifest" href="manifest.json">
+
+
+
+  <script>
+      function changeColor () {
+    //get value from form  
+    var selectedColor = document.getElementById('colorDropdown').value;
+            
+    //pick action based on value
+    if (selectedColor == "blue")
+    {
+      document.body.style.backgroundImage = "url('lightblue.png')"
+    }
+    else if (selectedColor == "gold")
+    {
+      document.body.style.backgroundImage = "url('lightgold.png')"
+    }
+  }
+  </script>
+
+  <title>Simple PWA</title>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+<h1 class="text-center sticky-top bg-light header"><a class="text-reset" href="index.html">Simple PWA</a></h1>
+
+<h3>PWA Characteristics</h3>
+
+<p>
+  Switch Background
+</p>
+<p>
+  <!--put dropdown here-->
+  <select name="colorDropdown" id="colorDropdown" onchange="changeColor()">
+  
+  <option value="#">--Select bckgrd--</option> 
+  <option value="blue">Blue</option>                         
+  <option value="gold">Gold</option>                            
+  </select>
+</p>
+  
+
+<p>
+  Progressive web applications or PWAs are a type of application that bridges the gap between
+  a normal web application run in a browser tab or window and a fully native application
+  installed on a phone or other device.
+</p>
+
+<p>
+  Function
+</p>
+<p>
+  A progressive web app typically has an icon that can be added to a homescreen or desktop.
+  When launched, it typically will maintain some or all functionality without an Internet connection.
+  In this way it differs from a normal web app or web page. The PWA may also launch in fullscreen mode,
+  without typical web browswer controls/taskbars and also may launch without showing on-screen mobile
+  controls like a back button, home button, or menu button. A final goal of PWAs is to create a more responsive
+  and fluid interface in comparison with a traditional web browswer.
+</p>
+
+
+<p>
+  Caching
+</p>
+<p>
+  To maintain offline functionality and improve responsiveness many PWAs will cache some
+  or all of the content they're expected to present on launch. This can reduce or eliminate
+  the amount of data the application needs to fetch from the host and will allow the user to
+  still use the app without an internet connection. For example, an user of a messenging app
+  will still want to be able to read their previous messages even if they don't have an
+  internet connection at that moment, right?
+</p>
+
+
+<p>
+  Notifications
+</p>
+<p>
+  An useful feature present on many native apps is push notifications. Although websites
+  did not always have the ability to send notifications to users, many now do. A PWA is also
+  capable of mimicking this behavior and as such gains a lot of functionality/utility.
+</p>
+
+
+<p>
+  Manifest
+</p>
+<p>
+  The manifest is a feature of a web app that allows it differ in appearance from a normal webpage.
+  Example, background_color is a property that changes the color fo the background of the splash
+  screen, the screen that shows up on launch when the app is still loading. From here, the icon shows
+  up on the homescreen can also be changed.
+</p>
+
+
+
+
+</div>
+
+<script>
+  //registers service worker - replaces a call to app.js file that would have roughly the same content
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('service-worker.js');
+    });
+  }
+</script>
+
+</body>
+
+<footer>
+  <nav class="navbar btn-group-s fixed-bottom navbar-light bg-light">
+    <div class="container text-small">
+    <a class="btn" href="index.html">HOME</a>
+  </div>
+  </nav>
+</footer>
+
+</html>
