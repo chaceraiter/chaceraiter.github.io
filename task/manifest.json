@@ -1,0 +1,9 @@
+{
+    "short_name": "HYBRID APPS",
+    "name": "HYBRID APPS",
+    "start_url": "index.html",
+    "background_color": "#0099fe",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#0099fe"
+  }
