@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+
+ <!--JQuery and Popper.js-->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <!--Bootstrap CDN-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+ 
+  <!--Viewport Detection-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Manifest-->
+  <link rel="manifest" href="manifest.json">
+
+
+
+  <script>
+
+  </script>
+
+  <title>Hybrid Apps</title>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+<h1 class="text-center sticky-top bg-light header"><a class="text-reset" href="index.html">Hybrid Apps</a></h1>
+
+<h3>Hybrid Apps</h3>
+
+<p>
+  The following is a report on solutions that can be used to create a hybrid app.
+  A hybrid app appears on the spectrum of applications between a fully native, mobile-first application and
+  an application designed for use exclusively with a web browswer.
+
+  A hybrid app's primary purpose is to reduce difficulty of development. Producing full-featured apps with their
+  own languages and technologies for each platform adds many layers of complexity to the creation process.
+  Producing a web app that can then be "wrapped" in a hybrid app greatly reduces this burden. At the same time,
+  asking users to use your service by way of a web browswer and web app may not allow use of some phone's accessories
+  and will not always be the most convenient solution. A hybrid app attempts to take the most important strengths from
+  each of these columns.
+
+  All that said, a decision needs to be made regarding the design and construction of our app and the technologies used
+  to do so. In brief, I will discuss the pros and cons of different methods to facilitate making a process decision.
+</p>
+<br>
+
+<p>
+  Phonegap/Cordova
+</p>
+<p>
+  Phonegap, also known as Cordova, is one of the "wrappers" or technologies utilized to turn a web app into a capable
+  native application for multiple platforms. It was something of a pioneer in hybrid app development. Like the other
+  technologies mentioned here, Phonegap had the backing of a major company, Adobe. Unfortunately, as of 2020, Adobe is
+  no longer developing or supporting Phonegap. One of the major interesting features of Phonegap was the ability to 
+  develop a web app and then nearly automatically convert to a hybrid, mobile-capable app by providing your web app's 
+  files to the service. As this is no longer supported it is not recommended for use.
+</p>
+<br>
+  
+
+<p>
+  Flutter
+</p>
+<p>
+  Flutter is another product used to develop applications for multiple platforms simultaneously. It's a Google product.
+  Flutter is well-documented and allows the use of hot updates for speedy development. Its performance on the top end may
+  be surpassed by other existing products. From a community standpoint, adoption is growing and there are a lot of other
+  developers to leverage as support. That said, it is still not a product intended for developing native apps any
+  product created with it will suffer the downsides inherit to non-native apps.
+</p>
+<br>
+
+<p>
+  React Native
+</p>
+<p>
+  React Native is another framework that allows for development of apps. Like Flutter, its supported by a major company
+  with other products (well funded), Facebook. Its similar to Flutter in many respects but differs in that it uses 3rd party
+  packages for many functionalities. While this means you may find increased functionality due to the open source nature
+  and development by 3rd parties, you can also find abandoned projects and tools that no longer work. Regarding native apps,
+  React Native suffers the same downsides as Flutter. 
+</p>
+<br>
+<br>
+
+
+
+<p>
+  References
+</p>
+<p>
+  <ul>
+    <li><a target="_blank" href="https://yml.co/native-vs-hybrid-mobile-apps-heres-how-to-choose">YML.co Hybrid App Basics</a></li>
+    <li><a target="_blank" href="https://fireart.studio/blog/flutter-vs-react-native-what-app-developers-should-know-about-cross-platform-mobile-development/">React and Flutter</a></li>
+    <li><a target="_blank" href="https://smccd.instructure.com/courses/41924/pages/topic-8-lecture-going-native-slash-hybrid-and-cloud?module_item_id=2561086">Canvas Docs</a></li>
+  </ul>
+</p>
+
+
+
+</div>
+
+<script>
+  //registers service worker - replaces a call to app.js file that would have roughly the same content
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('service-worker.js');
+    });
+  }
+</script>
+
+</body>
+
+<footer>
+  <nav class="navbar btn-group-s fixed-bottom navbar-light bg-light">
+    <div class="container text-small">
+  </div>
+  </nav>
+</footer>
+
+</html>
