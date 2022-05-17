@@ -9,12 +9,6 @@ self.addEventListener('install', function(event) {
         cache.addAll([
           'manifest.json',
           'index.html',
-          'lightblue.png',
-          'lightgold.png',
-          'icon_192x192.png',
-          'icon_256x256.png',
-          'icon_384x384.png',
-          'icon_512x512.png',
           'style.css'        
         ]);
       })
