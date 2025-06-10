@@ -18,7 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Chace Raiter's Technology Fun Blog
+title: Chace Raiter
+tagline: Technology Fun Blog
 email: raiter13@gmail.com
 description: >-
   This (b)log is intended to document all the technology stuff I'm doing!
